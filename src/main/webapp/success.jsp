@@ -17,10 +17,12 @@
 	<jsp:useBean id="adress" class="domain.Adress" scope="session" />
 	<jsp:setProperty property="*" name="adress" />
 	<%
+		
 		loan.setParameters(parameters);
 		loan.setPerson(person);
 		loan.setAdress(adress);
 		loanService.add(loan);
+		
 	%>
 	<ul>
 		<%

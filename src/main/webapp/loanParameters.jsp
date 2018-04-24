@@ -23,12 +23,15 @@
 	<p>
 		Data wygenerowania:
 		<%=loan.getDate()%></p>
+	<%
+		session.setAttribute("formNumber", loan.getNumber());
+	%>
 	<form action="person.jsp">
 		<label>Wnioskowana kwota: <input type="number" id="amount"
-			name="amount" /></label> <br /> 
-		<label>Ilosc rat: <input
+			name="amount" /></label> <br /> <label>Ilosc rat: <input
 			type="number" id="installmentCount" name="installmentCount" /></label><br />
 		<input type="submit" value="nastepny krok" />
 	</form>
+	<p><a href="/index.jsp">Wroc do strony glownej</a></p>
 </body>
 </html>
